@@ -25,14 +25,14 @@ def sleep_convert(swap_time):
       return real
 
    else:
-      print 'you fucked up: your swap time needs to be formatted like 30m, 5h, or 8d'
+      print('you fucked up: your swap time needs to be formatted like 30m, 5h, or 8d')
       sys.exit()
 	
 
 
 
 if len(sys.argv) < 2:
-   print "yokyu_wheel.py path/to/resolvers.csv [resolver_swap_out_time(10m,3h,2d)]"
+   print("yokyu_wheel.py path/to/resolvers.csv [resolver_swap_out_time(10m,3h,2d)]")
    sys.exit() 
 
 swap = sleep_convert('8h') 
@@ -43,7 +43,7 @@ if len(sys.argv) == 3:
 try:
    resolver = open(sys.argv[1]).readlines() 
 except Exception as e:
-   print 'CANNOT LOAD RESOLVER:{0}\n\nBAILING'.format(e)
+   print('CANNOT LOAD RESOLVER:{0}\n\nBAILING'.format(e))
    sys.exit() 
 
 resolver.pop(0)
